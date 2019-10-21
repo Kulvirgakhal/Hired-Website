@@ -1,0 +1,211 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+margin: 0%;
+padding: 0%;
+box-sizing: border-box
+}
+
+body {
+
+font-family: "Lato", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.7;
+color: #777;
+padding: 30px;
+
+}
+
+.header {
+height: 95vh;
+background-image:linear-gradient(to right bottom,
+rgba(126, 213, 111, 0.8),
+rgba(40, 66, 180, 0.8)),
+url(../img/hero.jpg);
+background-size: cover;
+background-position: top;
+clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+position: relative;
+}
+
+.logo-box {
+position: absolute;
+top: 40px;
+left: 40px;
+
+
+}
+
+.logo {
+height: 35px;
+}
+
+
+.text-box {
+position: absolute;
+top: 40%;
+left:50%;
+transform: translate(-50%, -50%);
+text-align: center;
+width: 1500px;
+
+}
+
+.heading-primary {
+color: white;
+text-transform: uppercase;
+
+
+}
+
+.heading-main{
+display:block;
+font-size: 80px;
+font-weight: 400;
+letter-spacing: 40px;
+animation-name: moveinleft;
+animation-duration: 3s;
+animation-timing-function: ease-out;
+
+/*animation-delay: 3s;*/
+
+}
+
+.heading-sub{
+display: block;
+font-size: 20px;
+font-weight: 700;
+letter-spacing: 17px;
+text-align: center;
+animation-name: moveinright;
+animation-duration: 3s;
+animation-timing-function: ease-out;
+}
+
+@keyframes moveinleft {
+0% {
+transform: translateX(-100px);
+opacity: 0;
+}
+
+
+80%{
+transform: translateX(20px);
+
+}
+
+100% {
+transform: translateX(0);
+opacity: 1;
+}
+
+}
+
+@keyframes moveinright {
+    0% {
+    transform: translateX(100px);
+    opacity: 0;
+    }
+    
+    
+    80%{
+    transform: translateX(-20px);
+    
+    }
+    
+    100% {
+    transform: translateX(0);
+    opacity: 1;
+    }
+    
+    }
+
+    
+
+    .btn:link,
+    .btn:visited {
+        text-transform: uppercase;
+        font-size: 20px;   
+        text-decoration: none;
+        padding: 15px 40px;
+        display:inline-block;
+        margin-top: 50px;
+        margin-right: 30px;
+        transition: all .1s;
+        position: relative;
+      
+                
+    }
+
+    .btn:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
+    }
+
+    .btn:active{
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 2);
+    }
+
+    .btn-white{
+background-color: white;
+color: #777;
+border-radius: 700px;
+    }
+
+    .btn::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+
+
+    }
+
+    .btn-white::after{
+
+        background-color: white;
+
+    }
+
+    .btn:hover::after{
+        transform: scalex(1.4) scaley(1.6);
+        opacity: 0;
+    }
+
+    .btn-animated{
+        animation-name: btnmoveinup;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-delay: 3s;
+        animation-fill-mode: backwards;
+
+    }
+
+    @keyframes btnmoveinup {
+        0% {
+        transform: translateY(50px);
+        opacity: 0;
+        }
+        
+              
+        100% {
+        transform: translateX(0);
+        opacity: 1;
+        }
+        
+        }
